@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bedwc8y7ertjg"]
+
+[ext_resource type="Script" path="res://scenes/manager/area_time_manager.gd" id="1_k2t7o"]
+
+[node name="AreaTimeManager" type="Node"]
+script = ExtResource("1_k2t7o")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true
