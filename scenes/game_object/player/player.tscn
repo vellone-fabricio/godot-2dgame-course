@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_pbskh"]
 [ext_resource type="PackedScene" uid="uid://c76jws23jrs21" path="res://scenes/component/health_component.tscn" id="2_6ejb2"]
 [ext_resource type="PackedScene" uid="uid://bx4g44jl30pv4" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="2_k7irj"]
-[ext_resource type="Texture2D" uid="uid://csl7j3y7sbpoc" path="res://scenes/game_object/player/player.png" id="2_uq6iy"]
+[ext_resource type="Texture2D" uid="uid://b0jgfmpsnprlw" path="res://scenes/game_object/player/player.png" id="2_uq6iy"]
 
 [sub_resource type="Animation" id="Animation_p5c6q"]
 length = 0.001
