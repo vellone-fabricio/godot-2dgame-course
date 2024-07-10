@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1d6rkt3qarge"]
 
 [ext_resource type="Script" path="res://scenes/manager/upgrade_manager.gd" id="1_jqqgi"]
-[ext_resource type="Resource" uid="uid://bih5orwfr6h0k" path="res://resources/upgrades/sword_rate.tres" id="2_gu3g8"]
+[ext_resource type="Resource" uid="uid://bih5orwfr6h0k" path="res://resources/upgrades/sword_damage.tres" id="2_gu3g8"]
 [ext_resource type="PackedScene" uid="uid://yu67m2q2qgdw" path="res://scenes/ui/upgrade_screen.tscn" id="3_57g56"]
 [ext_resource type="Resource" uid="uid://dymeqrouy16k2" path="res://resources/upgrades/axe.tres" id="3_bvepf"]
 
