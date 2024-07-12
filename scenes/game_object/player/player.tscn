@@ -1,10 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://c1tmm4nm7xcs7"]
+[gd_scene load_steps=19 format=3 uid="uid://c1tmm4nm7xcs7"]
 
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_pbskh"]
 [ext_resource type="PackedScene" uid="uid://c76jws23jrs21" path="res://scenes/component/health_component.tscn" id="2_6ejb2"]
 [ext_resource type="PackedScene" uid="uid://bx4g44jl30pv4" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="2_k7irj"]
 [ext_resource type="PackedScene" uid="uid://b3dadwwrpim3a" path="res://scenes/component/velocity_component.tscn" id="2_noksv"]
 [ext_resource type="Texture2D" uid="uid://b0jgfmpsnprlw" path="res://scenes/game_object/player/player.png" id="2_uq6iy"]
+[ext_resource type="PackedScene" uid="uid://cdfngpxj1lwei" path="res://scenes/component/random_stream_player_component.tscn" id="5_v4hs4"]
+[ext_resource type="AudioStream" uid="uid://bug5q10nqsaxl" path="res://assets/audio/impactMining_000.ogg" id="6_m68wv"]
+[ext_resource type="AudioStream" uid="uid://dl7jr7fwfltjj" path="res://assets/audio/impactMining_001.ogg" id="7_lypuu"]
+[ext_resource type="AudioStream" uid="uid://cja35edi0l6j5" path="res://assets/audio/impactMining_002.ogg" id="8_wr0l1"]
+[ext_resource type="AudioStream" uid="uid://bno4gu7ctulef" path="res://assets/audio/impactMining_003.ogg" id="9_mg3xj"]
+[ext_resource type="AudioStream" uid="uid://dn0grlu55yh72" path="res://assets/audio/impactMining_004.ogg" id="10_s1eb7"]
 
 [sub_resource type="Animation" id="Animation_p5c6q"]
 length = 0.001
@@ -130,6 +136,9 @@ acceleration = 25.0
 [node name="Abilities" type="Node" parent="."]
 
 [node name="SwordAbilityController" parent="Abilities" instance=ExtResource("2_k7irj")]
+
+[node name="RandomStreamPlayerComponent" parent="." instance=ExtResource("5_v4hs4")]
+streams = Array[AudioStream]([ExtResource("6_m68wv"), ExtResource("7_lypuu"), ExtResource("8_wr0l1"), ExtResource("9_mg3xj"), ExtResource("10_s1eb7")])
 
 [node name="DamageIntervalTimer" type="Timer" parent="."]
 wait_time = 0.5
