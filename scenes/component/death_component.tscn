@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/component/death_component.gd" id="1_hbsfd"]
 [ext_resource type="Texture2D" uid="uid://b6r4mt8rloujk" path="res://scenes/game_object/basic_enemy/basic_enemy.png" id="1_uw08u"]
-[ext_resource type="PackedScene" uid="uid://cdfngpxj1lwei" path="res://scenes/component/random_stream_player_component.tscn" id="3_x0wwe"]
+[ext_resource type="PackedScene" uid="uid://cdfngpxj1lwei" path="res://scenes/component/random_2d_stream_player_component.tscn" id="3_x0wwe"]
 [ext_resource type="AudioStream" uid="uid://ljfgqeqf6uuw" path="res://assets/audio/footstep_carpet_000.ogg" id="4_xsn0d"]
 [ext_resource type="AudioStream" uid="uid://bkhq8w0fdf4or" path="res://assets/audio/footstep_carpet_001.ogg" id="5_6t40f"]
 [ext_resource type="AudioStream" uid="uid://cb2l0i8n28mgl" path="res://assets/audio/footstep_carpet_002.ogg" id="6_dcy8n"]

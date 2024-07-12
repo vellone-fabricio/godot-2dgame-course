@@ -1,4 +1,4 @@
-extends AudioStreamPlayer
+extends AudioStreamPlayer2D
 
 @export var streams: Array[AudioStream]
 @export var randomize_pitch = true
