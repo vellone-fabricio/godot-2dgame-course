@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv01k5ylq26od"]
+[gd_scene load_steps=5 format=3 uid="uid://bv01k5ylq26od"]
 
 [ext_resource type="Script" path="res://scenes/ui/options_menu.gd" id="1_1hq85"]
+[ext_resource type="PackedScene" uid="uid://tuhjhqas2ohe" path="res://scenes/ui/vignette.tscn" id="2_nhxui"]
 [ext_resource type="TileSet" uid="uid://r6ft4w27otwm" path="res://resources/tileset.tres" id="2_vav42"]
 [ext_resource type="PackedScene" uid="uid://bna5qo0hc4cjp" path="res://scenes/ui/sound_button.tscn" id="3_0gayh"]
 
@@ -54,19 +55,22 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/SfxOptionContainer"]
 layout_mode = 2
-text = "SFX Sound"
+theme_type_variation = &"BlueLabelOutliner"
+text = "SFX Volume"
 
 [node name="SfxSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/SfxOptionContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 max_value = 1.0
 step = 0.01
+value = 0.5
 
 [node name="MusicOptionContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MusicOptionContainer"]
 layout_mode = 2
+theme_type_variation = &"BlueLabelOutliner"
 text = "Music Volume"
 
 [node name="MusicSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MusicOptionContainer"]
@@ -80,6 +84,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/WindowOptionContainer"]
 layout_mode = 2
+theme_type_variation = &"BlueLabelOutliner"
 text = "Window mode"
 
 [node name="WindowButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/WindowOptionContainer" instance=ExtResource("3_0gayh")]
@@ -94,3 +99,6 @@ custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Back"
+
+[node name="Vignette" parent="." instance=ExtResource("2_nhxui")]
+layer = 2
