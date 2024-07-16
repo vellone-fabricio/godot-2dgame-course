@@ -39,7 +39,7 @@ func close():
 	tween.tween_property(panel_container, "scale", Vector2.ZERO, .3)\
 		.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_BACK)
 	
-	await tween
+	await tween.finished
 	
 	get_tree().paused = false
 	queue_free()
@@ -50,6 +50,8 @@ func on_resume_pressed():
 
 
 func on_options_pressed():
+	ScreenTransition.transition()
+	await ScreenTransition.transition_halfway
 	var options_menu_instance = options_menu_scene.instantiate()
 	add_child(options_menu_instance)
 	options_menu_instance.back_pressed.connect(on_back_pressed.bind(options_menu_instance))
