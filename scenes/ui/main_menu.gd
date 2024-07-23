@@ -6,6 +6,7 @@ func _ready():
 	%PlayButton.pressed.connect(on_play_button)
 	%OptionsButton.pressed.connect(on_options_button)
 	%QuitButton.pressed.connect(on_quit_button)
+	%UpgradesButton.pressed.connect(on_upgrades_button)
 
 func on_play_button():
 	await ScreenTransition.transition()
@@ -25,3 +26,6 @@ func on_quit_button():
 
 func on_back_pressed(options_instance: Node):
 	options_instance.queue_free()
+
+func on_upgrades_button():
+	ScreenTransition.transition_to_scene("res://scenes/ui/meta_menu.tscn")
