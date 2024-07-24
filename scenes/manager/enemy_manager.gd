@@ -11,6 +11,7 @@ const SPAWN_RADIUS = 280
 
 var base_spawn_time = 0
 var enemy_table = WeightedTable.new()
+var number_to_spawn = 1
 
 func _ready():
 	enemy_table.add_item(basic_enemy_scene, 10)
@@ -47,12 +48,13 @@ func on_timer_timeout():
 	if player == null:
 		return
 	
-	var enemy_scene = enemy_table.pick_item()
-	var enemy = enemy_scene.instantiate() as Node2D
-	
-	var entities_layer = get_tree().get_first_node_in_group("entities_layer")
-	entities_layer.add_child(enemy)
-	enemy.global_position = get_spawn_position()
+	for i in number_to_spawn:	
+		var enemy_scene = enemy_table.pick_item()
+		var enemy = enemy_scene.instantiate() as Node2D
+		
+		var entities_layer = get_tree().get_first_node_in_group("entities_layer")
+		entities_layer.add_child(enemy)
+		enemy.global_position = get_spawn_position()
 
 func on_arena_difficulty_increased(arena_difficulty: int):
 	var time_off = (.1 / 12) * arena_difficulty
@@ -63,3 +65,6 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 		enemy_table.add_item(wizard_enemy_scene, 15)
 	elif arena_difficulty == 18:
 		enemy_table.add_item(bat_enemy_scene, 8)
+	
+	if (arena_difficulty % 6) == 0:
+		number_to_spawn += 1
